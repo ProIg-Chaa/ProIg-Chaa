@@ -40,15 +40,15 @@
 
 ### 代表项目
 
-#### [nano-vllm-radix](https://github.com/ProIg-Chaa/nano-vllm-radix)
+#### [nano-radix-vllm](https://github.com/ProIg-Chaa/nano-radix-vllm)
 
-围绕 prefix-aware / radix 风格 KV Cache 复用做持续实验的项目。  
-重点不是一次性重写系统，而是在轻量推理框架里做可验证、低风险、逐步演进的改造。
+一个从 `nano-vllm` 演进出来的独立项目，目标是在保持轻量推理框架可理解性的同时，逐步接入 SGLang 风格的 radix / prefix reuse 能力。  
+它更强调“渐进式系统演化”，而不是一次性照搬完整实现。
 
 **你可以从这里看到我在做什么：**
-- 逐阶段推进 prefix cache 能力改造
-- 强调观测、验证和实验记录
-- 面向真实 LLM serving 场景理解缓存复用
+- 逐阶段推进 radix / prefix cache 能力演化
+- 加入 prefix-aware scheduling 和 tree-based prefix cache
+- 支持比原始 `nano-vllm` 更细粒度的 partial-tail reuse
 
 #### [llm-quant-benchmark](https://github.com/ProIg-Chaa/llm-quant-benchmark)
 
@@ -126,15 +126,15 @@ I enjoy turning research ideas into small but understandable engineering systems
 
 ### Featured Projects
 
-#### [nano-vllm-radix](https://github.com/ProIg-Chaa/nano-vllm-radix)
+#### [nano-radix-vllm](https://github.com/ProIg-Chaa/nano-radix-vllm)
 
-A project focused on prefix-aware and radix-style KV cache reuse in a lightweight inference framework.  
-The goal is not a one-shot rewrite, but a step-by-step and verifiable systems evolution.
+An independent project evolved from `nano-vllm`, aimed at incrementally integrating SGLang-style radix and prefix reuse ideas while keeping the framework lightweight and understandable.  
+It emphasizes gradual systems evolution rather than a one-shot port.
 
 **What this project emphasizes:**
-- Incremental prefix cache integration
-- Observability, validation, and experiment logging
-- Practical understanding of cache reuse in LLM serving
+- Incremental radix and prefix cache evolution
+- Prefix-aware scheduling and tree-based prefix cache management
+- Finer-grained partial-tail reuse beyond the original `nano-vllm`
 
 #### [llm-quant-benchmark](https://github.com/ProIg-Chaa/llm-quant-benchmark)
 
