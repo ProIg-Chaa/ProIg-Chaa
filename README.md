@@ -1,87 +1,98 @@
-## Hi there 👋
-# SHUO GU / ProIg-Chaa
+# SHUO GU
 
-<p align="right">
-  <a href="#-中文">中文</a> | <a href="#-english">English</a>
-</p>
+<div align="center">
 
-Software Engineering student at South China University of Technology, currently focusing on LLM inference optimization, quantization, and CUDA systems learning.
+### ProIg-Chaa
 
-华南理工大学软件工程专业学生，当前主要关注大语言模型推理优化、模型量化与 CUDA 系统方向实践。
+**Software Engineering Student | LLM Systems | Quantization | CUDA**
+
+<a href="#-中文">中文</a> · <a href="#-english">English</a>
+
+</div>
 
 ---
 
 ## 中文
 
-### 关于我
+<div align="center">
+
+### 把大模型系统做得更高效，也更容易理解
+
+</div>
 
 你好，我是 **SHUO GU**，GitHub 用户名是 **ProIg-Chaa**。  
-我目前的学习和项目重点主要围绕以下几个方向展开：
+目前是华南理工大学软件工程专业学生，主要在做和学习这些方向：
 
-- 大语言模型推理优化
-- KV Cache / Prefix Cache 复用机制
-- 模型量化与性能基准测试
-- CUDA 算子与底层系统工程
+<div align="center">
 
-我比较喜欢把论文思路和工程实现结合起来，尽量把一个想法做成可以复现实验、能跑通、可继续迭代的小系统。
+`LLM Inference` `KV Cache` `Prefix Reuse` `Quantization` `CUDA` `PyTorch`
 
-### 我在做什么
+</div>
 
-- 研究 prefix reuse 和 radix 风格的 KV Cache 复用思路，并尝试把它逐步接入轻量推理框架
-- 搭建统一的 LLM 量化 benchmark 流程，对比不同量化方案在延迟、吞吐和显存上的表现
-- 搭 CUDA 算子库脚手架，为后续 kernel、benchmark、测试和 PyTorch 绑定做准备
+### 我在关注什么
+
+- 大语言模型推理优化与轻量 serving 系统
+- Prefix Cache / KV Cache 复用机制
+- 模型量化、压缩与性能基准测试
+- CUDA 算子实现与底层工程实践
+
+我比较喜欢把论文里的思路一步一步落到工程实现里，做成可以复现实验、可观察、可继续扩展的小系统，而不是只停留在想法层面。
 
 ### 代表项目
 
 #### [nano-vllm-radix](https://github.com/ProIg-Chaa/nano-vllm-radix)
 
-基于轻量推理框架持续推进 prefix-aware / radix 风格 KV Cache 复用实验。  
-这个项目更偏向系统实现过程中的可验证演进，而不是一次性大改动。
+围绕 prefix-aware / radix 风格 KV Cache 复用做持续实验的项目。  
+重点不是一次性重写系统，而是在轻量推理框架里做可验证、低风险、逐步演进的改造。
 
-**亮点：**
-- 按阶段推进 prefix cache 能力改造
-- 强调可观测、可验证、低风险迭代
-- 面向 LLM serving 场景理解缓存复用机制
+**你可以从这里看到我在做什么：**
+- 逐阶段推进 prefix cache 能力改造
+- 强调观测、验证和实验记录
+- 面向真实 LLM serving 场景理解缓存复用
 
 #### [llm-quant-benchmark](https://github.com/ProIg-Chaa/llm-quant-benchmark)
 
-一个面向本地大模型推理的量化基准测试项目，用统一流程比较 `FP16`、`bitsandbytes INT8/INT4`、`AWQ`、`GPTQ` 等方案。
+一个本地大模型量化 benchmark 项目，用统一流程对比 `FP16`、`INT8`、`INT4`、`AWQ`、`GPTQ` 等方案的效果。
 
-**亮点：**
+**项目侧重点：**
 - 统一 benchmark pipeline 和输出 schema
-- 关注 TTFT、总延迟、吞吐和显存占用
-- 强调结果可复现，而不是一次性实验脚本
+- 对比 TTFT、总延迟、吞吐和显存占用
+- 强调结果可复现、方便后续扩展
 
 #### [cuda-oplib](https://github.com/ProIg-Chaa/cuda-oplib)
 
-一个用于构建、测试、benchmark 和后续扩展的 CUDA 算子库脚手架，适合作为后续 kernel 实验的基础工程。
+一个用于构建、测试和 benchmark 自定义 CUDA operator 的基础脚手架，为后续 kernel 实验和 PyTorch 绑定预留了清晰结构。
 
-**亮点：**
-- 结构清晰，适合长期扩展
-- 包含测试、benchmark、示例和绑定目录
-- 面向后续自定义 CUDA operator 开发
+**项目侧重点：**
+- 面向长期扩展的工程目录设计
+- 包含 tests、benchmarks、examples、bindings
+- 作为后续 CUDA kernel 学习和沉淀的基础工程
 
 #### [turboquant-pytorch-learning](https://github.com/ProIg-Chaa/turboquant-pytorch-learning)
 
-基于 TurboQuant 的学习与工程化整理项目，重点是把压缩 KV Cache 的能力封装成更容易接入 HuggingFace 生成流程的接口。
+一个围绕 TurboQuant 的学习与工程化整理项目，重点在于把压缩 KV Cache 的能力整理成更容易接入 HuggingFace `generate()` 的接口。
 
-**亮点：**
-- 将压缩逻辑整理为更清晰的接口层
-- 支持 HuggingFace 风格 `generate()` 接入
-- 更强调工程可用性和理解过程
+**项目侧重点：**
+- 从脚本实现整理成更清晰的接口层
+- 支持 HuggingFace 风格生成流程接入
+- 更偏重“理解 + 工程可用性”
 
-### 技术关键词
+### 技术栈
 
-`Python` `PyTorch` `CUDA` `C++` `CMake` `LLM Serving` `Quantization`
+<div align="center">
 
-### 目前关注
+`Python` `PyTorch` `CUDA` `C++` `CMake` `Transformers` `LLM Serving` `Quantization`
 
-- 高效大模型推理系统
-- Prefix Cache / KV Cache 优化
-- CUDA Kernel 工程实践
-- 模型压缩与部署性能分析
+</div>
 
-### 联系我
+### 现在的目标
+
+- 继续深入高效 LLM 推理系统
+- 做更多 KV Cache / Prefix Reuse 相关实验
+- 补强 CUDA kernel 和底层系统能力
+- 把已有项目逐渐整理成更完整的工程作品
+
+### 联系方式
 
 - GitHub: [@ProIg-Chaa](https://github.com/ProIg-Chaa)
 
@@ -89,72 +100,83 @@ Software Engineering student at South China University of Technology, currently 
 
 ## English
 
-### About Me
+<div align="center">
+
+### Making LLM systems more efficient and easier to understand
+
+</div>
 
 Hi, I'm **SHUO GU**, and my GitHub handle is **ProIg-Chaa**.  
-I am a Software Engineering student at South China University of Technology, currently focusing on:
+I am a Software Engineering student at South China University of Technology, currently working on and learning about:
 
-- LLM inference optimization
-- KV cache and prefix cache reuse
-- quantization benchmarking
-- CUDA operators and systems engineering
+<div align="center">
 
-I enjoy turning research ideas into reproducible experiments and small but understandable systems that can be iterated on over time.
+`LLM Inference` `KV Cache` `Prefix Reuse` `Quantization` `CUDA` `PyTorch`
 
-### What I'm Working On
+</div>
 
-- Exploring prefix reuse and radix-style KV cache management in lightweight LLM inference frameworks
-- Building a unified benchmarking pipeline for local LLM quantization experiments
-- Creating a reusable CUDA operator library scaffold for future kernel and systems work
+### What I care about
+
+- LLM inference optimization and lightweight serving systems
+- Prefix cache and KV cache reuse
+- Quantization, compression, and benchmarking
+- CUDA operators and low-level systems engineering
+
+I enjoy turning research ideas into small but understandable engineering systems that are reproducible, observable, and easy to iterate on.
 
 ### Featured Projects
 
 #### [nano-vllm-radix](https://github.com/ProIg-Chaa/nano-vllm-radix)
 
-A project centered on incremental integration of prefix-aware and radix-style KV cache reuse into a lightweight inference framework.
+A project focused on prefix-aware and radix-style KV cache reuse in a lightweight inference framework.  
+The goal is not a one-shot rewrite, but a step-by-step and verifiable systems evolution.
 
-**Highlights:**
-- Step-by-step evolution of prefix cache capabilities
-- Focus on observability, verification, and low-risk iteration
-- Practical systems understanding for LLM serving workloads
+**What this project emphasizes:**
+- Incremental prefix cache integration
+- Observability, validation, and experiment logging
+- Practical understanding of cache reuse in LLM serving
 
 #### [llm-quant-benchmark](https://github.com/ProIg-Chaa/llm-quant-benchmark)
 
-A reproducible benchmark project for local LLM inference, comparing `FP16`, `bitsandbytes INT8/INT4`, `AWQ`, and `GPTQ` under a unified pipeline.
+A local LLM quantization benchmark project that compares `FP16`, `INT8`, `INT4`, `AWQ`, and `GPTQ` under a unified evaluation pipeline.
 
-**Highlights:**
-- Unified benchmark pipeline and output schema
-- Measures TTFT, latency, throughput, and GPU memory
-- Built for reproducible engineering experiments
+**What this project emphasizes:**
+- A unified benchmark pipeline and output schema
+- TTFT, latency, throughput, and GPU memory comparison
+- Reproducible engineering experiments
 
 #### [cuda-oplib](https://github.com/ProIg-Chaa/cuda-oplib)
 
-A CUDA operator library scaffold for building, testing, benchmarking, and later extending custom GPU kernels.
+A scaffold for building, testing, and benchmarking custom CUDA operators, with a clean structure for future kernels and PyTorch bindings.
 
-**Highlights:**
-- Organized for long-term growth
-- Includes tests, benchmarks, examples, and binding structure
-- A solid base for future custom operator development
+**What this project emphasizes:**
+- Long-term extensible project organization
+- Dedicated tests, benchmarks, examples, and bindings
+- A solid base for future CUDA kernel work
 
 #### [turboquant-pytorch-learning](https://github.com/ProIg-Chaa/turboquant-pytorch-learning)
 
-A learning-oriented and engineering-focused project around TurboQuant, with emphasis on making compressed KV cache integration easier for HuggingFace-style generation workflows.
+A learning-oriented and engineering-focused TurboQuant project that makes compressed KV cache integration easier for HuggingFace-style `generate()` workflows.
 
-**Highlights:**
-- Refactors compression logic into clearer APIs
-- Supports HuggingFace-style `generate()` integration
-- Focuses on engineering usability and understanding
+**What this project emphasizes:**
+- Refactoring experimental logic into cleaner APIs
+- HuggingFace-style generation integration
+- A balance between understanding and usability
 
 ### Tech Stack
 
-`Python` `PyTorch` `CUDA` `C++` `CMake` `LLM Serving` `Quantization`
+<div align="center">
 
-### Current Interests
+`Python` `PyTorch` `CUDA` `C++` `CMake` `Transformers` `LLM Serving` `Quantization`
 
-- Efficient LLM serving systems
-- Prefix cache and KV cache optimization
-- CUDA kernel engineering
-- Practical model compression and deployment analysis
+</div>
+
+### Current Focus
+
+- Efficient LLM inference systems
+- More experiments on KV cache and prefix reuse
+- Stronger CUDA kernel and systems engineering skills
+- Turning current projects into more polished engineering work
 
 ### Contact
 
@@ -162,19 +184,8 @@ A learning-oriented and engineering-focused project around TurboQuant, with emph
 
 ---
 
-> Still learning, still building, and trying to make LLM systems more efficient and more understandable.
+<div align="center">
 
-<!--
-**ProIg-Chaa/ProIg-Chaa** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+`Still learning.` `Still building.` `Still curious about LLM systems.`
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+</div>
