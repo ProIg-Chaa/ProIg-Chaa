@@ -1,4 +1,4 @@
-# SHUO GU
+# SHWAH KOO
 
 <div align="center">
 
@@ -29,7 +29,7 @@
 
 ### 关于我
 
-你好，我是 **SHUO GU**，华南理工大学软件工程专业学生，GitHub 用户名是 **ProIg-Chaa**。
+你好，我是 **SHWAH KOO**，华南理工大学软件工程专业学生，GitHub 用户名是 **ProIg-Chaa**。
 
 我主要在做两类事情：
 
@@ -133,7 +133,7 @@ flowchart LR
 
 ### About Me
 
-Hi, I'm **SHUO GU**, a Software Engineering student at South China University of Technology, and my GitHub handle is **ProIg-Chaa**.
+Hi, I'm **SHWAH KOO**, a Software Engineering student at South China University of Technology, and my GitHub handle is **ProIg-Chaa**.
 
 I mainly work on two kinds of problems:
 
