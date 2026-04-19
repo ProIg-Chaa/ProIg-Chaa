@@ -1,4 +1,4 @@
-# SHWAH KOO
+# KOO SHWAH
 
 <div align="center">
 
@@ -29,7 +29,7 @@
 
 ### 关于我
 
-你好，我是 **SHWAH KOO**，华南理工大学软件工程专业学生，GitHub 用户名是 **ProIg-Chaa**。
+你好，我是 **KOO SHWAH**，华南理工大学软件工程专业学生，GitHub 用户名是 **ProIg-Chaa**。
 
 我主要在做两类事情：
 
@@ -51,15 +51,19 @@
 
 ```mermaid
 flowchart LR
-    A[Request / Prompt] --> B[Tokenizer & Prefill]
-    B --> C[KV Cache Build]
-    C --> D[Prefix Reuse / Radix Match]
-    D --> E[Scheduling / Batching]
-    E --> F[Decode Loop]
-    F --> G[Attention / Memory Access]
-    G --> H[Quantization / Compression]
-    H --> I[CUDA Kernel / Runtime]
-    I --> J[Benchmark / Profiling / Iteration]
+    subgraph Top[System Flow]
+        A[Request / Prompt] --> B[Tokenizer & Prefill]
+        B --> C[KV Cache Build]
+        C --> D[Prefix Reuse / Radix Match]
+        D --> E[Scheduling / Batching]
+        E --> F[Decode Loop]
+    end
+    subgraph Bottom[Optimization And Validation]
+        G[Attention / Memory Access] --> H[Quantization / Compression]
+        H --> I[CUDA Kernel / Runtime]
+        I --> J[Benchmark / Profiling / Iteration]
+    end
+    F --> G
 ```
 
 ### 技术重点展开
@@ -133,7 +137,7 @@ flowchart LR
 
 ### About Me
 
-Hi, I'm **SHWAH KOO**, a Software Engineering student at South China University of Technology, and my GitHub handle is **ProIg-Chaa**.
+Hi, I'm **KOO SHWAH**, a Software Engineering student at South China University of Technology, and my GitHub handle is **ProIg-Chaa**.
 
 I mainly work on two kinds of problems:
 
@@ -155,15 +159,19 @@ I do not want to understand only isolated optimization tricks. I want to underst
 
 ```mermaid
 flowchart LR
-    A[Request / Prompt] --> B[Tokenizer & Prefill]
-    B --> C[KV Cache Build]
-    C --> D[Prefix Reuse / Radix Match]
-    D --> E[Scheduling / Batching]
-    E --> F[Decode Loop]
-    F --> G[Attention / Memory Access]
-    G --> H[Quantization / Compression]
-    H --> I[CUDA Kernel / Runtime]
-    I --> J[Benchmark / Profiling / Iteration]
+    subgraph Top[System Flow]
+        A[Request / Prompt] --> B[Tokenizer & Prefill]
+        B --> C[KV Cache Build]
+        C --> D[Prefix Reuse / Radix Match]
+        D --> E[Scheduling / Batching]
+        E --> F[Decode Loop]
+    end
+    subgraph Bottom[Optimization And Validation]
+        G[Attention / Memory Access] --> H[Quantization / Compression]
+        H --> I[CUDA Kernel / Runtime]
+        I --> J[Benchmark / Profiling / Iteration]
+    end
+    F --> G
 ```
 
 ### Focus Areas In Detail
