@@ -84,6 +84,24 @@ flowchart LR
 - 一个 cache / quantization 方案是否真的能在真实 serving 流程里稳定受益
 - 一个工程实现是否既能跑得快，也能被别人读懂、修改和继续扩展
 
+### 我现在参与的工作
+
+我目前也在参与 **多模态大模型隐式推理优化** 相关工作。
+
+这类工作里，我关注的不只是模型是否“会推理”，更关心：
+
+- 隐式推理过程能否在不过度增加 latency 和 memory pressure 的前提下稳定发生
+- 多模态输入进入系统后，文本 token、视觉特征与推理链路之间的开销如何分布
+- 推理优化能否真正落到工程系统里，而不只是停留在离线实验结果
+
+我尤其在意这几个方向：
+
+- **推理效率**：降低 multimodal prefilling、cross-modal interaction 和 decode 的额外成本
+- **系统协同**：把推理优化和 cache reuse、batching、调度、压缩一起看，而不是孤立分析
+- **效果-开销权衡**：分析准确性、推理深度、响应速度与资源消耗之间的平衡关系
+
+这也让我把自己的兴趣，从单模态 LLM inference，逐步延伸到 **面向真实场景的多模态推理系统优化**。
+
 ### Featured Projects
 
 | Project | Focus | What it shows |
@@ -191,6 +209,18 @@ flowchart LR
 - Which layer an optimization really improves: `compute-bound`, `memory-bound`, or `scheduler-bound`
 - Whether a cache or quantization idea still helps inside a realistic serving pipeline
 - Whether a system is not only fast, but also understandable and extensible
+
+### Work I Am Doing Now
+
+I am also participating in work on **implicit reasoning optimization for multimodal large models**.
+
+What matters to me here is not only whether a model can reason, but whether that reasoning can be made efficient, stable, and system-friendly in practice.
+
+- **Reasoning efficiency**: reducing the extra cost of multimodal prefilling, cross-modal interaction, and decoding
+- **System integration**: understanding how reasoning optimization interacts with cache reuse, batching, scheduling, and compression
+- **Quality-cost tradeoffs**: studying the balance among reasoning depth, response quality, latency, and resource use
+
+This direction naturally extends my focus from single-modal LLM inference toward **practical multimodal reasoning system optimization**.
 
 ### Featured Projects
 
