@@ -127,6 +127,10 @@ flowchart LR
 - MLLM reasoning efficiency / stability 方向的合作或建议
 - 小而扎实、可复现、可继续演化的工程实验
 
+### 博客
+
+- 对于中文读者，我整理了一些个人的学习笔记在*[@ProIg-Chaa](https://proig-chaa.github.io/)*
+
 ### Contact
 
 - GitHub: [@ProIg-Chaa](https://github.com/ProIg-Chaa)
