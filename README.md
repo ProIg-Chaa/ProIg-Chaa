@@ -129,7 +129,7 @@ flowchart LR
 
 ### 博客
 
-- 对于中文读者，我整理了一些个人的学习笔记在*[@ProIg-Chaa](https://proig-chaa.github.io/)*
+- 对于中文读者，我整理了一些个人的学习笔记在*[@Chaa的AI学习笔记](https://proig-chaa.github.io/)*
 
 ### Contact
 
