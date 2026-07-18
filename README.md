@@ -29,7 +29,7 @@
 
 ### 关于我
 
-你好，我是 **KOO SHWAH**，华南理工大学软件工程专业学生，GitHub 用户名是 **ProIg-Chaa**。
+你好，我是 **KOO SHWAH**，软件工程专业学生，GitHub 用户名是 **ProIg-Chaa**。
 
 我目前关注的核心问题是：
 
